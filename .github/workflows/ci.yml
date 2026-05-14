@@ -54,7 +54,7 @@ jobs:
           args: --timeout=5m --config=.golangci.yml
 
       - name: Lint Dockerfile (hadolint)
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: Dockerfile
           config: .hadolint.yaml
@@ -149,7 +149,7 @@ jobs:
           cache-from: type=gha
 
       - name: Scan image with Trivy
-        uses: aquasecurity/trivy-action@0.36.0
+        uses: aquasecurity/trivy-action@v0.36.0
         with:
           image-ref: notar:scan
           format: table
