@@ -128,8 +128,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: false
           load: false
-          provenance: mode=max
-          sbom: true
+          provenance: false
+          sbom: false
           build-args: |
             VERSION=ci-${{ github.sha }}
             COMMIT=${{ github.sha }}
